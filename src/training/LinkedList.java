@@ -98,6 +98,30 @@ public class LinkedList {
         }
         temp.next = temp.next.next;
     }
+    
+    // Remove first node with the given value
+    public void deleteByValue(int value) {
+        if (head == null) {
+            System.out.println("List is empty.");
+            return;
+        }
+        if (head.data == value) {
+            head = head.next;
+            System.out.println("Node with value " + value + " deleted from head.");
+            return;
+        }
+        Node temp = head;
+        while (temp.next != null && temp.next.data != value) {
+            temp = temp.next;
+        }
+        if (temp.next == null) {
+            System.out.println("Value not found in the list.");
+            return;
+        }
+        temp.next = temp.next.next;
+        System.out.println("Node with value " + value + " deleted.");
+    }
+
 
     public void display() {
         if (head == null) {
@@ -127,7 +151,8 @@ public class LinkedList {
             System.out.println("5. Remove Tail");
             System.out.println("6. Remove at Position");
             System.out.println("7. Display List");
-            System.out.println("8. Exit");
+            System.out.println("8. Delete by Value");
+            System.out.println("9. Exit");
             System.out.print("Enter your choice: ");
             choice = sc.nextInt();
 
@@ -158,6 +183,11 @@ public class LinkedList {
                 }
                 case 7 -> list.display();
                 case 8 -> {
+                    System.out.print("Enter value to delete: ");
+                    int v = sc.nextInt();
+                    list.deleteByValue(v);
+                }
+                case 9 -> {
                     System.out.println("Exiting program...");
                     sc.close();
                     return;
