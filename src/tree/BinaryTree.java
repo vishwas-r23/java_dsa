@@ -1,4 +1,4 @@
-package training;
+package tree;
 // Node class for Binary Tree
 class Nodes {
     int data;
