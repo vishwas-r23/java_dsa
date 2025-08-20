@@ -11,10 +11,10 @@ class Nodes {
 }
 
 // Binary Tree class
-public class BinaryTree {
+public class BinaryTreeDfs {
     Nodes root;
 
-    public BinaryTree() {
+    public BinaryTreeDfs() {
         root = null;
     }
 
@@ -81,7 +81,7 @@ public class BinaryTree {
 
     // Main method to run example
     public static void main(String[] args) {
-        BinaryTree tree = new BinaryTree();
+        BinaryTreeDfs tree = new BinaryTreeDfs();
 
         /* Example insertion */
         tree.insert(50);
