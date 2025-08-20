@@ -1,4 +1,0 @@
-training.StackLinkedList
-training.StackQueue
-training.StackOptionMenu
-training.StackLinkedList$Node

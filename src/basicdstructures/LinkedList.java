@@ -1,4 +1,4 @@
-package training;
+package basicdstructures;
 import java.util.Scanner;
 public class LinkedList {
 
